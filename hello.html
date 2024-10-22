@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Check</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Enter Your Name</h1>
+    <input type="text" id="nameInput" placeholder="Your name">
+    <br>
+    <button onclick="checkName()">Submit</button>
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    function checkName() {
+        const name = document.getElementById("nameInput").value;
+        const resultDiv = document.getElementById("result");
+        
+        if (name === "Zach" || name === "Sean") {
+            resultDiv.textContent = "You are cool!";
+            resultDiv.style.color = "green";
+        } else {
+            resultDiv.textContent = "Hello " + name + ", nice to meet you!";
+            resultDiv.style.color = "blue";
+        }
+    }
+</script>
+
+</body>
+</html>
